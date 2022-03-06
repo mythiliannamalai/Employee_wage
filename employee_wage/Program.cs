@@ -10,22 +10,32 @@ int Employeestates = random.Next(0, 2);
 int Employeetime = random1.Next(0, 2);
 if (Employeestates == present)
 {
-    if (Employeetime == fulltime)
-    {
-        Console.WriteLine("the Employee is present");
-        emphr = 8;
-    }
-    else
-    {
-        Console.WriteLine("the Employee is partimer");
-        emphr = 4;
-    }
+    present = 1;
 }
 else
 {
-    Console.WriteLine("the Employee is absent");
+    present = 0;
 
-    emphr = 0;
 }
+    switch (present)
+    {
+        case 1:
+            if (Employeetime == fulltime)
+            {
+                Console.WriteLine("the Employee is present");
+                emphr = 8;
+            }
+            else
+            {
+                Console.WriteLine("the Employee is partimer");
+                emphr = 4;
+            }
+            break;
+        default:
+            Console.WriteLine("the Employee is absent");
+
+            emphr = 0;
+            break;
+    }
 empwage = (Emp_per_rate * emphr);
 Console.WriteLine("Daily wage" + empwage);
