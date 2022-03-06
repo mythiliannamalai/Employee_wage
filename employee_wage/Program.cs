@@ -4,6 +4,8 @@ int fulltime = 1;
 int Emp_per_rate = 20;
 int emphr = 0;
 int empwage = 0;
+int total_wday = 20;
+int month_pay=0;
 Random random = new Random();
 Random random1 = new Random();
 int Employeestates = random.Next(0, 2);
@@ -39,3 +41,5 @@ else
     }
 empwage = (Emp_per_rate * emphr);
 Console.WriteLine("Daily wage" + empwage);
+month_pay = (total_wday * empwage);
+Console.WriteLine("monthly wage : " + month_pay);
