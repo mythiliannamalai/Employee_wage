@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\emp_wg\emp_wg\bin\Debug\net6.0\emp_wg.exe
+C:\Users\user\source\repos\emp_wg\emp_wg\bin\Debug\net6.0\emp_wg.deps.json
+C:\Users\user\source\repos\emp_wg\emp_wg\bin\Debug\net6.0\emp_wg.runtimeconfig.json
+C:\Users\user\source\repos\emp_wg\emp_wg\bin\Debug\net6.0\emp_wg.dll
+C:\Users\user\source\repos\emp_wg\emp_wg\bin\Debug\net6.0\emp_wg.pdb
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.AssemblyInfo.cs
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.dll
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\refint\emp_wg.dll
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.pdb
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\emp_wg.genruntimeconfig.cache
+C:\Users\user\source\repos\emp_wg\emp_wg\obj\Debug\net6.0\ref\emp_wg.dll
