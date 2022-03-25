@@ -29,6 +29,7 @@
         private const int IS_ABSENT = 0;
         float EmpDailyWage = 0;
         private float TotalWage = 0;
+       
         private Dictionary<String, Company> Companies = new Dictionary<string, Company>();
 
         private void AddCompany(String CompanyName, int EmpWagePerHour, int FullTime_WorkingHrs_PerDay, int PartTime_WorkingHrs_PerDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS)
@@ -49,7 +50,7 @@
             int DayNumber = 1;
             int EmpWorkingHrs = 0;
             int TotalWorkingHrs = 0;
-            //int WorkingDay = 0;
+            
             if (!Companies.ContainsKey(CompanyName.ToLower()))
                 throw new ArgumentException("company don't exist");
             Companies.TryGetValue(CompanyName.ToLower(), out Company company);
@@ -75,7 +76,10 @@
             }
             Console.WriteLine("\nCompany name: " + CompanyName);
             Console.WriteLine("Total working days :" + (DayNumber) + "\nTotal working hours : " + TotalWorkingHrs + "\nTotal employee wage : " + TotalWage);
-
+            int MAX_WORKING_HRS = company.MAX_WORKING_HRS;
+            
+            var Total_Cmp_wage=(MAX_WORKING_HRS * company.EmpWagePerHour);
+            Console.WriteLine("Total wage of company : " + Total_Cmp_wage);
         }
 
         static void Main(string[] args)
