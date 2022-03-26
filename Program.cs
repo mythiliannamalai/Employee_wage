@@ -8,8 +8,6 @@ namespace Emp_Wge
     {
         ArrayList companyDetail = new ArrayList();
         Dictionary<string, ArrayList> companie = new Dictionary<string, ArrayList>();
-        public int PRESENT = 1;
-        public int FULL_TIME = 1;
         public int FULLTIME_EMP_WORK_HR;
         public int PARTTIME_EMP_WORK_HR;
         public int EMP_WAGE_PER_HR = 20;
