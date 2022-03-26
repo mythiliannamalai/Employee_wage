@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-
-
-namespace empwg
+using System.Text;
+using System.Threading.Tasks;
+namespace InterfaceApplication
 {
-    class CompanyEmpWage
+    public class CompanyEmpWage : EmployeeWage
     {
         public int PRESENT = 1;
         public int FULL_TIME = 1;
