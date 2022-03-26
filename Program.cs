@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace InterfaceApplication
+namespace Emp_Wge
 {
-    public class CompanyEmpWage : EmployeeWage
+    class Company
     {
+        ArrayList companyDetail = new ArrayList();
+        Dictionary<string, ArrayList> companie = new Dictionary<string, ArrayList>();
         public int PRESENT = 1;
         public int FULL_TIME = 1;
         public int FULLTIME_EMP_WORK_HR;
@@ -21,23 +21,24 @@ namespace InterfaceApplication
         public int EMP_ATTENDANCE_COUNT = 0;
         public int ATTENDANCE;
         public string COMPANY_NAME;
-        public void CompanyDetail(int EMP_WAGE_PER_HR, int FULLTIME_EMP_WORK_HR, int PARTTIME_EMP_WORK_HR, int TOTAL_WORK_HR, int TOTAL_WORK_DAYS)
+        public void AddDetail(string COMPANY_NAME, int EMP_WAGE_PER_HR, int FULLTIME_EMP_WORK_HR, int PARTTIME_EMP_WORK_HR, int TOTAL_WORK_HR, int TOTAL_WORK_DAYS)
         {
+            this.COMPANY_NAME = COMPANY_NAME;
             this.EMP_WAGE_PER_HR = EMP_WAGE_PER_HR;
             this.FULLTIME_EMP_WORK_HR = FULLTIME_EMP_WORK_HR;
             this.PARTTIME_EMP_WORK_HR = PARTTIME_EMP_WORK_HR;
             this.TOTAL_WORK_HR = TOTAL_WORK_HR;
             this.TOTAL_WORK_DAYS = TOTAL_WORK_DAYS;
-            int[] Company = new int[5];
-            Company[0] = EMP_WAGE_PER_HR;
-            Company[1] = FULLTIME_EMP_WORK_HR;
-            Company[2] = PARTTIME_EMP_WORK_HR;
-            Company[3] = TOTAL_WORK_HR;
-            Company[4] = TOTAL_WORK_DAYS;
+            companyDetail.Add(COMPANY_NAME);
+            companyDetail.Add(EMP_WAGE_PER_HR);
+            companyDetail.Add(FULLTIME_EMP_WORK_HR);
+            companyDetail.Add(PARTTIME_EMP_WORK_HR);
+            companyDetail.Add(TOTAL_WORK_HR);
+            companyDetail.Add(TOTAL_WORK_DAYS);
+            companie.Add(COMPANY_NAME, companyDetail);
         }
         public void Calculation(string CAMPANY_NAME)
         {
-            this.COMPANY_NAME = CAMPANY_NAME;
             while (EMP_ATTENDANCE_COUNT != 20 && TOTAL_WORK_HR <= 100)
             {
                 Random random = new Random();
@@ -57,7 +58,7 @@ namespace InterfaceApplication
                         break;
                 }
             }
-            Console.WriteLine("\n Company name :" + COMPANY_NAME);
+            Console.WriteLine("\nCompany name :" + COMPANY_NAME);
             ONE_DAY_EMP_WAGE = (EMP_WAGE_PER_HR * EMP_WORKING_HR);
             Console.WriteLine("Daily Wage :" + ONE_DAY_EMP_WAGE);
             MOTHLY_EMP_WAGE = (ONE_DAY_EMP_WAGE * EMP_ATTENDANCE_COUNT);
@@ -66,12 +67,11 @@ namespace InterfaceApplication
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to employee wage computation");
-            CompanyEmpWage companyEmpWage = new CompanyEmpWage();
-            companyEmpWage.CompanyDetail(20, 8, 4, 100, 20);
-            companyEmpWage.Calculation("tata");
-            companyEmpWage.CompanyDetail(30,8,4, 100, 20);
-            companyEmpWage.Calculation(" mahindra");
-
+            Company program = new Company();
+            program.AddDetail("tata", 20, 8, 4, 100, 20);
+            program.Calculation("tata");
+            program.AddDetail("mahindra", 30, 8, 4, 100, 20);
+            program.Calculation("mahindra");
         }
     }
 }
