@@ -61,6 +61,9 @@ namespace Emp_Wge
             Console.WriteLine("Daily Wage :" + ONE_DAY_EMP_WAGE);
             MOTHLY_EMP_WAGE = (ONE_DAY_EMP_WAGE * EMP_ATTENDANCE_COUNT);
             Console.WriteLine("Monthly Wage : " + MOTHLY_EMP_WAGE);
+            int a = FULLTIME_EMP_WORK_HR * EMP_WAGE_PER_HR;
+            int CompanyTotalWage = TOTAL_WORK_DAYS * a;
+            Console.WriteLine("Company total wage :"+CompanyTotalWage);
         }
         static void Main(string[] args)
         {
